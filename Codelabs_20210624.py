@@ -87,20 +87,30 @@
 
 # 7.Escreva uma função que recebe dois parâmetros e imprime o menor dos dois. Se eles forem iguais, imprima que eles são iguais.
 
-# def menor(a,b):
-#     return min(a,b)
+# def menor():
+    
+#     a = int(input('Digite um valor: '))
+#     b = int(input('Digite outro valor: '))
+#     if a == b:
+#         return('São iguais!')
+#     else:
+#         minimo = min(a,b)
+#         print(f'O menor valor digitado é: {minimo}')
+    
 
-# a = int(input('Digite um valor: '))
-# b = int(input('Digite outro valor: '))
-
-# print(f'O menor valor digitado é: {menor(a,b)}')
+# menor()
 
 #-----------------------------------------------------------------------------------------------------
 
 # DESAFIO -  Data com mês por extenso. Construa uma função que receba uma data no formato DD/MM/AAAA e devolva uma string no formato D de mesPorExtenso de AAAA. Opcionalmente, valide a data e retorne NULL caso a data seja inválida. Considere que Fevereiro tem 28 dias e que a cada 4 anos temos ano bissexto, sendo que nesses casos Fevereiro terá 29 dias.
 
 data = input('Informe uma data no formato dd/mm/aaaa: ')
-mes = str(data[3:5])
+dia = data.split('/')[0]
+mes = data.split('/')[1]
+ano = data.split('/')[2]
 
 mesPorExtenso = {'01':'Janeiro', '02':'Fevereiro', '03':'Março', '04':'Abril', '05':'Maio', '06':'Junho', '07':'Julho', '08':'Agosto', '09':'Setembro', '10':'Outubro', '11':'Novembro', '12':'Dezembro'}
 
+# print(mesPorExtenso.get(mes,'Não existe esse mes'))
+
+#--------------------------------- CONTINUAR ---------------------
